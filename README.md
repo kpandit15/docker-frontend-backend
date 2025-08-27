@@ -1,53 +1,55 @@
-# stremlit-app Project
+# Docker Frontend-Backend Project
+
+This project demonstrates a containerized application with separate frontend and backend services using Docker.
 
 ## Prerequisites
 
-- Python 3.10+
-- [pip](https://pip.pypa.io/en/stable/)
-- (Optional) [Docker](https://www.docker.com/)
+- Docker
+- Docker Compose
 
-## Setup
 
-1. **Clone the repository:**
-    ```bash
-    git clone <repo-url>
-    cd fast-api
-    ```
+## Getting Started
 
-2. **Create and activate a virtual environment:**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-
-3. **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## Running the Project
-
+1. Clone the repository:
 ```bash
-streamlit run app.py
+git clone https://github.com/kpandit15/docker-frontend-backend.git
 ```
-- The API will be available at `http://127.0.0.1:8000`.
 
-## Building with Docker
+2. Navigate to the project directory:
+```bash
+cd docker-frontend-backend
+```
 
-1. **Build the Docker image:**
-    ```bash
-    docker compose build
-    ```
+3. Start the containers:
+```bash
+docker-compose up
+```
 
-2. **Run the container:**
-    ```bash
-    docker compose up
-    ```
-3. **Tear down the docker images**
-    ```
-    docker compose down
-    ```
+## Services
+
+### Frontend
+- Built with streamlit
+- Runs on port 8501
+
+### Backend
+- Built with mongo-db]
+- Runs on port 27017
+
+## Development
+
+To build and run the containers in development mode:
+```bash
+docker compose up --build
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
 
 ## License
 
-MIT  
+This project is licensed under the MIT License
