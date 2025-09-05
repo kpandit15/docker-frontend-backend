@@ -22,7 +22,7 @@ cd docker-frontend-backend
 
 3. Start the containers:
 ```bash
-docker-compose up
+docker compose up -b
 ```
 
 ## Services
@@ -32,15 +32,8 @@ docker-compose up
 - Runs on port 8501
 
 ### Backend
-- Built with mongo-db]
+- Built with mongo-db
 - Runs on port 27017
-
-## Development
-
-To build and run the containers in development mode:
-```bash
-docker compose up --build
-```
 
 ## Contributing
 
