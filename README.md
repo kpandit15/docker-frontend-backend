@@ -1,48 +1,56 @@
 # Docker Frontend-Backend Project
 
-This project demonstrates a containerized application with separate frontend and backend services using Docker.
+This project demonstrates a containerized application with separate frontend and backend services using Docker. The frontend is built with Streamlit, and the backend uses MongoDB.
 
 ## Prerequisites
 
 - Docker
-- Docker Compose
-
 
 ## Getting Started
 
-1. Clone the repository:
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/kpandit15/docker-frontend-backend.git
-```
-
-2. Navigate to the project directory:
-```bash
 cd docker-frontend-backend
 ```
 
-3. Start the containers:
+### 2. Start the containers
+
 ```bash
-docker compose up -b
+docker compose up --build -d
 ```
 
-## Services
+This command will build and start both the frontend and backend services in detached mode.
 
-### Frontend
-- Built with streamlit
-- Runs on port 8501
+## Accessing the Services
 
-### Backend
-- Built with mongo-db
-- Runs on port 27017
+### Frontend (Streamlit)
 
-## Contributing
+- Open your browser and navigate to: [http://localhost:8501](http://localhost:8501)
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+### MongoDB (Backend)
+
+- MongoDB runs on port `27017`.
+### MongoDB Express UI
+
+- The project includes a Mongo Express UI service for easy MongoDB management.
+- Access the Mongo Express UI at: [http://localhost:8081](http://localhost:8081)
+- Alternatively, you can use [MongoDB Compass](https://www.mongodb.com/products/compass) or any MongoDB client.
+- Connect to: `mongodb://admin:password@localhost:27017/`
+
+**Database Login Credentials:**
+- **Username:** `admin`
+- **Password:** `pass`
+
+## Stopping the Services
+
+To stop the containers, run:
+
+```bash
+docker compose down
+```
 
 ## License
 
-This project is licensed under the MIT License
+This project is licensed under the MIT License.
